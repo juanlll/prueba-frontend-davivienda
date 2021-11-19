@@ -1,28 +1,30 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <v-main>
+      <div>
+        <v-card max-width="700" class="mx-auto">
+          <v-app-bar dark color="#ed1c27">
+            <v-toolbar-title>Pagos En Linea</v-toolbar-title>
+            <v-spacer></v-spacer>
+          </v-app-bar>
+          <v-container> <Products /></v-container>
+        </v-card>
+      </div>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Products from './components/Products'
 export default {
   name: 'App',
+
   components: {
-    HelloWorld
-  }
+    Products
+  },
+
+  data: () => ({
+    //
+  })
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
