@@ -27,7 +27,7 @@
             <v-row dense v-if="n == 2" class="p-30">
               <h2 class="ml-2">Producto Seleccionado:</h2>
               <v-col cols="12">
-                <v-card :color="'white'" class="pb-5">
+                <v-card :color="product.status === 'activa' ? 'white' : '#d1d1d1'" class="pb-5" >
                   <div class="d-flex flex-no-wrap justify-space-between">
                     <div>
                       <v-card-title
@@ -77,7 +77,6 @@
 
                       <v-card-actions>
                         <v-btn
-                          v-if="item.status === 'activa'"
                           color="#ed1c27"
                           style="color:white"
                           @click="selectProduct(item)"
